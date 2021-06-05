@@ -8,7 +8,7 @@ const Base58Check = require("bs58check");
 const Buffer = require('safe-buffer').Buffer;
 
 const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
-const Version = 0x41;
+const Version = 0x42;
 const NEATAddrPrefix = "NEA";
 
 const create = entropy => {
