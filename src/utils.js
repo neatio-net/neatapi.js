@@ -329,14 +329,14 @@ function getParamCoder(typeInput) {
 
         var prefix = (part[2] || part[4] || part[5]); // eslint-disable-line
         switch (prefix) {
-            case 'neat': case 'uint':
+            case 'int': case 'uint':
                 if (coder) { throw new Error(invalidTypeErrorMessage); }
                 var intSize = parseInt(part[3] || 256); // eslint-disable-line
                 if (intSize === 0 || intSize > 256 || (intSize % 8) !== 0) {
                     throw new Error(`[neatjs-abi] while getting param coder for type ${type}, invalid ${prefix}<N> width: ${type}`);
                 }
 
-                coder = coderNumber(intSize / 8, (prefix === 'neat'));
+                coder = coderNumber(intSize / 8, (prefix === 'int'));
                 break;
 
             case 'bool':
