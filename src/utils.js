@@ -315,7 +315,7 @@ function coderArray(coder, lengthInput) {
 
 // Break the type up into [staticType][staticArray]*[dynamicArray]? | [dynamicType] and
 // build the coder up from its parts
-const paramTypePart = new RegExp(/^((u?neat|bytes)([0-9]*)|(address|bool|string)|(\[([0-9]*)\]))/);
+const paramTypePart = new RegExp(/^((u?int|bytes)([0-9]*)|(address|bool|string)|(\[([0-9]*)\]))/);
 
 function getParamCoder(typeInput) {
     var type = typeInput; // eslint-disable-line
